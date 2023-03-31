@@ -25,8 +25,8 @@ namespace UltimateXR.Locomotion
         [SerializeField]                                private float            _rotationDegreesPerSecondSprint = 120.0f;
         [SerializeField]                                private float            _gravity                        = -9.81f;
 
-        [Header("Input parameters")] [SerializeField] private UxrHandSide     _sprintButtonHand = UxrHandSide.Left;
-        [SerializeField]                              private UxrInputButtons _sprintButton     = UxrInputButtons.Joystick;
+        [Header("Input parameters")] [SerializeField] private UxrHandSide     _sprintButtonHand;
+        [SerializeField]                              private UxrInputButtons _sprintButton;
 
         [Header("Constraints")] [SerializeField] private QueryTriggerInteraction _triggerCollidersInteraction = QueryTriggerInteraction.Ignore;
         [SerializeField]                         private LayerMask               _collisionLayerMask          = ~0;
@@ -154,18 +154,18 @@ namespace UltimateXR.Locomotion
 
                     if (forwardTransform != null)
                     {
-                        offset = Vector3.ProjectOnPlane(forwardTransform.forward, Vector3.up).normalized * joystickLeft.y +
-                                 Vector3.ProjectOnPlane(forwardTransform.right,   Vector3.up).normalized * joystickLeft.x;
+                        offset = Vector3.ProjectOnPlane(forwardTransform.forward, Vector3.up).normalized * joystickRight.y +
+                                 Vector3.ProjectOnPlane(forwardTransform.right,   Vector3.up).normalized * joystickRight.x;
                     }
                 }
                 else if (_walkDirection == UxrWalkDirection.AvatarForward)
                 {
-                    offset = Avatar.transform.forward * joystickLeft.y + Avatar.transform.right * joystickLeft.x;
+                    offset = Avatar.transform.forward * joystickRight.y + Avatar.transform.right * joystickRight.x;
                 }
                 else if (_walkDirection == UxrWalkDirection.LookDirection)
                 {
-                    offset = Vector3.ProjectOnPlane(Avatar.CameraComponent.transform.forward, Vector3.up).normalized * joystickLeft.y +
-                             Vector3.ProjectOnPlane(Avatar.CameraComponent.transform.right,   Vector3.up).normalized * joystickLeft.x;
+                    offset = Vector3.ProjectOnPlane(Avatar.CameraComponent.transform.forward, Vector3.up).normalized * joystickRight.y +
+                             Vector3.ProjectOnPlane(Avatar.CameraComponent.transform.right,   Vector3.up).normalized * joystickRight.x;
                 }
 
                 if (offset.magnitude > 1.0f)
