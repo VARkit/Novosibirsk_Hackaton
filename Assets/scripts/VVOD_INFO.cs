@@ -41,7 +41,7 @@ public class VVOD_INFO : MonoBehaviour
             check();
         }
             help_texts[item].SetActive(false);
-            if (item < 4)
+            if (item <= 2)
             {
                 item += 1;
                 help_texts[item].SetActive(true);

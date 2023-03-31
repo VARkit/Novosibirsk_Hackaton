@@ -1,16 +1,20 @@
+using UltimateXR.Avatar;
+using UltimateXR.Core;
+using UltimateXR.Devices;
 using UnityEngine;
 
 public class LaserShooter : MonoBehaviour
 {
     public GameObject laserPrefab; // префаб лазера
     public float laserSpeed = 0.001f; // скорость лазера
-
+    bool wasPressed;
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // если нажата левая кнопка мыши
+        if (wasPressed) // если нажата левая кнопка мыши
         {
             ShootLaser(); // вызываем функцию стрельбы
         }
+        wasPressed = UxrAvatar.LocalAvatarInput.GetButtonsPressDown(UxrHandSide.Right, UxrInputButtons.Trigger);
     }
 
     void ShootLaser()

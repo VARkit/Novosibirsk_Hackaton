@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sph_Child : MonoBehaviour
 {
     public MishenColLVL0 parent;
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "laser")
         {
