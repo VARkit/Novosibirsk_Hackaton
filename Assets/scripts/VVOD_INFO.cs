@@ -17,6 +17,7 @@ public class VVOD_INFO : MonoBehaviour
     public int mark;
     public int age;
     public string sex;
+    public GameObject canv;
     public void EnterText()
     {
         if (item == 0)
@@ -44,6 +45,10 @@ public class VVOD_INFO : MonoBehaviour
             {
                 item += 1;
                 help_texts[item].SetActive(true);
+            }
+            if(item == 4)
+            {
+                canv.SetActive(false);
             }
         }
         public void check()
