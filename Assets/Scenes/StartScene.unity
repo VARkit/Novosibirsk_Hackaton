@@ -7821,6 +7821,61 @@ MonoBehaviour:
     _audioClip: {fileID: 0}
     _audioVolume: 1
     _useAudio3D: 1
+--- !u!1 &886299384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 886299385}
+  - component: {fileID: 886299387}
+  - component: {fileID: 886299386}
+  m_Layer: 0
+  m_Name: plosadka_lvl0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &886299385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886299384}
+  m_LocalRotation: {x: -6.1232336e-17, y: 1, z: 6.1232336e-17, w: -0.0000000754979}
+  m_LocalPosition: {x: -0, y: 0, z: 0.017643897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543450653318537209}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &886299386
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886299384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7906724927511644184, guid: 91bed0b1fa123ac4285812271a42e8dd, type: 3}
+--- !u!33 &886299387
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886299384}
+  m_Mesh: {fileID: 7906724927511644184, guid: 91bed0b1fa123ac4285812271a42e8dd, type: 3}
 --- !u!114 &886375883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22696,6 +22751,7 @@ Transform:
   - {fileID: 9166596736819885014}
   - {fileID: 7984427180160336336}
   - {fileID: 5154926413865208097}
+  - {fileID: 886299385}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -22877,7 +22933,6 @@ GameObject:
   - component: {fileID: 7984427180160336336}
   - component: {fileID: 8778755771664661890}
   - component: {fileID: 5107081096898165538}
-  - component: {fileID: 8778755771664661891}
   m_Layer: 0
   m_Name: plosadka_lvl0
   m_TagString: Untagged
@@ -23194,19 +23249,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4740391657077439767}
   m_Mesh: {fileID: 7906724927511644184, guid: 91bed0b1fa123ac4285812271a42e8dd, type: 3}
---- !u!65 &8778755771664661891
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4740391657077439767}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7328507, y: 0.07627835, z: 2.8289528}
-  m_Center: {x: -0.0000014369197, y: 0.1681404, z: 0.5656949}
 --- !u!1 &8992314588016038898
 GameObject:
   m_ObjectHideFlags: 0
