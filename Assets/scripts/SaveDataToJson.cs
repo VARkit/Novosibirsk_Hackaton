@@ -28,7 +28,7 @@ public class SaveDataToJson : MonoBehaviour
         string jsonData = JsonConvert.SerializeObject(LVL1DATA,  Formatting.Indented);
 
         // Записываем данные в файл
-        string filePath = Application.streamingAssetsPath + "/1STLVL.json";
+        string filePath = Application.dataPath + "/1STLVL.json";
         File.WriteAllText(filePath, jsonData);
     }
     private void Start()

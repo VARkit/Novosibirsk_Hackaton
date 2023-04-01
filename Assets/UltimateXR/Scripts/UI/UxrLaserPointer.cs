@@ -417,10 +417,10 @@ namespace UltimateXR.UI
                                       };
             colorGradient.alphaKeys = new[]
                                       {
-                                                  new GradientAlphaKey(0.0f, 0.0f),
+                                                  new GradientAlphaKey(1f, 1f),
                                                   new GradientAlphaKey(1.0f, t1 / rayLength),
                                                   new GradientAlphaKey(1.0f, t2 / rayLength),
-                                                  new GradientAlphaKey(0.0f, 1.0f)
+                                                  new GradientAlphaKey(1f, 1.0f)
                                       };
             _lineRenderer.colorGradient = colorGradient;
 
