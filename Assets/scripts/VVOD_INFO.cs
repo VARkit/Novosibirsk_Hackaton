@@ -19,6 +19,7 @@ public class VVOD_INFO : MonoBehaviour
     public string sex;
     public GameObject canv;
     public SaveDataToJson SaveDataToJson;
+    public GameObject mishen;
     public void EnterText()
     {
         if (item == 0)
@@ -41,6 +42,7 @@ public class VVOD_INFO : MonoBehaviour
         {
             check();
             canv.SetActive(false);
+            mishen.SetActive(true);
         }
         if (item < 4)
         {
