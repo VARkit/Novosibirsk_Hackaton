@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 68104188cd30edb489796a587da74fe4, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 4285864a439b5e841a150bf7c7e9ff3f, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -890,6 +890,55 @@ MonoBehaviour:
     _audioClip: {fileID: 0}
     _audioVolume: 1
     _useAudio3D: 1
+--- !u!1 &131212374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131212376}
+  - component: {fileID: 131212375}
+  m_Layer: 0
+  m_Name: JSON_SAVER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &131212375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131212374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45c142a6d1bd13409f93b725a757abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mark: 0
+  Name: 
+  Gender: 
+  age: 0
+  baloons: 0
+--- !u!4 &131212376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131212374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.7813427, y: 4.852327, z: 5.912963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &131766418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4286,7 +4335,7 @@ RectTransform:
   m_Children:
   - {fileID: 1472493006}
   m_Father: {fileID: 1405595710}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5966,6 +6015,7 @@ MonoBehaviour:
   age: 0
   sex: 
   canv: {fileID: 696121060}
+  SaveDataToJson1LVL: {fileID: 131212375}
 --- !u!114 &698846959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8850,7 +8900,7 @@ RectTransform:
   - {fileID: 1021819621}
   - {fileID: 1979028414}
   m_Father: {fileID: 1437135951}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11597,7 +11647,7 @@ RectTransform:
   - {fileID: 242637992}
   - {fileID: 1851155342}
   m_Father: {fileID: 1151466216}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13780,7 +13830,7 @@ RectTransform:
   - {fileID: 413315804}
   - {fileID: 1998929173}
   m_Father: {fileID: 1405595710}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13968,7 +14018,7 @@ RectTransform:
   m_Children:
   - {fileID: 542887834}
   m_Father: {fileID: 494085720}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20174,7 +20224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2452114811308096173, guid: c216c4fb684db134c9cdf8441b831f9f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2452114811308096173, guid: c216c4fb684db134c9cdf8441b831f9f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -22451,7 +22501,7 @@ RectTransform:
   - {fileID: 181798650}
   - {fileID: 1628289475}
   m_Father: {fileID: 494085720}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23155,6 +23205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 1
+  SaveDataToJson1LVL: {fileID: 131212375}
 --- !u!54 &7508648774597649518
 Rigidbody:
   m_ObjectHideFlags: 0

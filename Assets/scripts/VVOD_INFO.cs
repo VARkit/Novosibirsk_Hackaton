@@ -18,6 +18,7 @@ public class VVOD_INFO : MonoBehaviour
     public int age;
     public string sex;
     public GameObject canv;
+    public SaveDataToJson SaveDataToJson;
     public void EnterText()
     {
         if (item == 0)
@@ -39,21 +40,28 @@ public class VVOD_INFO : MonoBehaviour
         else if (item == 4)
         {
             check();
+            canv.SetActive(false);
         }
-            help_texts[item].SetActive(false);
-            if (item <= 2)
-            {
-                item += 1;
-                help_texts[item].SetActive(true);
-            }
-            if(item == 4)
-            {
-                canv.SetActive(false);
-            }
+        if (item <= 2)
+        {
+            item += 1;
+            help_texts[item].SetActive(true);
         }
+    }
         public void check()
         {
-
+            if (name == null | mark == 0 | age == 0 | sex == null)
+            {
+                item = 0;
+                EnterText();
+            }
+            else
+            {
+                SaveDataToJson.age = age;
+                SaveDataToJson.Gender = sex;
+                SaveDataToJson.mark = mark;
+                SaveDataToJson.name = name;
+            }
         }
 }
 

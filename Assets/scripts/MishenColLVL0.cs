@@ -16,7 +16,7 @@ public class MishenColLVL0 : MonoBehaviour
     public AudioClip AudioClip;
     public AudioClip AudioClipEnd;
     public AudioClip CommandFire;
-
+    public SaveDataToJson SaveDataToJson;
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "laser")
@@ -41,6 +41,7 @@ public class MishenColLVL0 : MonoBehaviour
             go_counter = false;
             StartCoroutine(littlewait());
             sph_cnt = 9;
+            SaveDataToJson.baloons = Mathf.Round(time).ToString();
         }
     }
     IEnumerator firewait()
