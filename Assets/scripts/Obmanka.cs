@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.PlayerLoop;
 
 public class Obmanka : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class Obmanka : MonoBehaviour
     public AudioClip pohvala;
     bool isplaying;
     bool ispohvalaplaying;
+
+    public SaveDataToJson SaveDataToJson;
+    public int num;
     private void Update()
     {
         if (razlet && counter != spheres.Length)
@@ -39,8 +43,17 @@ public class Obmanka : MonoBehaviour
             AudioSource.clip = pohvala;
             AudioSource.Play();
             ispohvalaplaying = true;
+
         }
+       // SaveDataToJson.crackens[num] = Mathf.Round(time).ToString();
+
+
     }
+
+
+    
+
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Hiter")

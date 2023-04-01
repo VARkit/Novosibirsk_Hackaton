@@ -20,6 +20,8 @@ public class VVOD_INFO : MonoBehaviour
     public GameObject canv;
     public SaveDataToJson SaveDataToJson;
     public GameObject mishen;
+    int num;
+
     public void EnterText()
     {
         if (item == 0)
