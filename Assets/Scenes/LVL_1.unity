@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: _rotationDegreesPerSecondSprint
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 3911782065065865236, guid: 6a962d5af1b926f4fa4b2ee26bda1d19, type: 3}
+      propertyPath: _targetTypes
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4828861620919420251, guid: 6a962d5af1b926f4fa4b2ee26bda1d19, type: 3}
       propertyPath: _clickInput
       value: 16384
