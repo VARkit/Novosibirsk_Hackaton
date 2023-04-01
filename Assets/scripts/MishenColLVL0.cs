@@ -15,6 +15,8 @@ public class MishenColLVL0 : MonoBehaviour
     public AudioSource AudioSource;
     public AudioClip AudioClip;
     public AudioClip AudioClipEnd;
+    public AudioClip CommandFire;
+
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "laser")
@@ -23,6 +25,7 @@ public class MishenColLVL0 : MonoBehaviour
             if(counter == 10)
             {
                 StartCoroutine(firewait());
+                counter = 11;
             }
         }
     }
@@ -36,13 +39,13 @@ public class MishenColLVL0 : MonoBehaviour
         if(sph_cnt == 8)
         {
             go_counter = false;
-            AudioSource.clip = AudioClipEnd;
             StartCoroutine(littlewait());
             sph_cnt = 9;
         }
     }
     IEnumerator firewait()
     {
+        AudioSource.clip = CommandFire;
         AudioSource.Play();
         yield return new WaitForSeconds(11);
         AudioSource.clip = AudioClip;
@@ -54,6 +57,7 @@ public class MishenColLVL0 : MonoBehaviour
     }
     IEnumerator littlewait(){
         yield return new WaitForSeconds(0.5f);
+        AudioSource.clip = AudioClipEnd;
         AudioSource.Play();
     }
 }

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1084643899567256820, guid: 11188ba9c66c2cb45af419c86d375d72, type: 3}
-  laserSpeed: 5
+  laserSpeed: 10
 --- !u!1001 &601733033666759572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1320,6 +1320,10 @@ PrefabInstance:
     - target: {fileID: 9064259894265353843, guid: e7468ec6b7af89c4d94d451ec3c1807b, type: 3}
       propertyPath: m_Name
       value: CyborgAvatar_BRP
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064259894265353843, guid: e7468ec6b7af89c4d94d451ec3c1807b, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 9164602275232906188, guid: e7468ec6b7af89c4d94d451ec3c1807b, type: 3}
       propertyPath: m_IsActive
