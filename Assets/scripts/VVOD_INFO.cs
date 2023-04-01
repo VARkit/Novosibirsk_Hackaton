@@ -42,8 +42,9 @@ public class VVOD_INFO : MonoBehaviour
             check();
             canv.SetActive(false);
         }
-        if (item <= 2)
+        if (item < 4)
         {
+            help_texts[item].SetActive(false);
             item += 1;
             help_texts[item].SetActive(true);
         }
