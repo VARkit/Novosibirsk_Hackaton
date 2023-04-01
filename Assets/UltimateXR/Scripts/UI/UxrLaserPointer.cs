@@ -309,7 +309,8 @@ namespace UltimateXR.UI
 
             _hitQuad                  = new GameObject("Laser Hit");
             _hitQuad.transform.parent = transform;
-
+            _hitQuad.AddComponent<BoxCollider>().isTrigger = true;
+            _hitQuad.tag = "Hiter";
             MeshFilter laserHitMeshFilter = _hitQuad.AddComponent<MeshFilter>();
             laserHitMeshFilter.sharedMesh = MeshExt.CreateQuad(1.0f);
 
