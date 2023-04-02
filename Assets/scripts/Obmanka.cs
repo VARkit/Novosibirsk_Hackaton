@@ -41,11 +41,11 @@ public class Obmanka : MonoBehaviour
         else if (razlet && counter == spheres.Length && !ispohvalaplaying)
         {
             AudioSource.clip = pohvala;
+            SaveDataToJson.crackens[num] = Mathf.Round(time).ToString();
             AudioSource.Play();
             ispohvalaplaying = true;
 
         }
-       // SaveDataToJson.crackens[num] = Mathf.Round(time).ToString();
 
 
     }

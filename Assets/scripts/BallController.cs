@@ -20,6 +20,7 @@ public class BallController : MonoBehaviour
     public int NumSphere;
     public string razn;
     public SaveDataToJson SaveDataToJson;
+    bool SendData;
     void Start()
     {
         ballRenderer = GetComponent<Renderer>(); // Получаем компонент Renderer шара
@@ -29,57 +30,67 @@ public class BallController : MonoBehaviour
     {
         weight = Int32.Parse(inputField.text);
         transforming = true;
+        SendData = true;
     }
     void Update()
     {   
+        
         if(transforming)
-        {   
-            float dif2 = size - weight;
-            
-            if(dif2 > 100)
+        {
+            if(SendData)
             {
-                point.transform.localPosition = new Vector3(0, 5, 0);
-            }
-            else if(dif2 < -100)
-            {
-                point.transform.localPosition = new Vector3(0, -5, 0);
-            }
-            else
-            {
-                point.localPosition = new Vector3(0, -3 * dif2 / 100, 0);
-            }
-            gameObject.transform.position = Vector3.Lerp(transform.position, point.position, speed);
-            difference = Mathf.Abs(size - weight); // Вычисляем модуль разности между размером и весом шара-
-            print(dif2);
             razn += " " + difference.ToString();
-
-            // Если разность равна 50, устанавливаем зеленый цвет
-            if (difference == 0)
-            {
-                ballRenderer.material.SetColor("_EmissionColor", Color.green);
+            SaveDataToJson.normals[NumSphere] = razn;
+            SendData = false;
             }
-            // Если разность меньше 50 и больше или равна 30, вычисляем промежуточное значение между зеленым и желтым цветом
-            else if (difference > 0 && difference <= 20)
+            if(weight >=0 && weight <= 100)
             {
-                colorValue = Mathf.InverseLerp(0, 40, difference);
-                ballRenderer.material.SetColor("_EmissionColor", new Color(colorValue, 1 - colorValue, 0f));
+                float dif2 = size - weight;
+                print(dif2);
+                if (dif2 < 0)
+                {
+                    point.localPosition = new Vector3(0, -3 * dif2 / 100, 0);
+                }
+                else
+                {
+                    point.localPosition = new Vector3(0, -3 * dif2 / 100, 0);
+                }
+                gameObject.transform.position = Vector3.Lerp(transform.position, point.position, speed);
+                difference = Mathf.Abs(size - weight); // Вычисляем модуль разности между размером и весом шара-
+                // Если разность равна 50, устанавливаем зеленый цвет
+                if (difference == 0)
+                {
+                    ballRenderer.material.SetColor("_EmissionColor", Color.green * 2);
+                }
+                // Если разность меньше 50 и больше или равна 30, вычисляем промежуточное значение между зеленым и желтым цветом
+                else if (difference > 0 && difference <= 20)
+                {
+                    colorValue = Mathf.InverseLerp(0, 40, difference);
+                    ballRenderer.material.SetColor("_EmissionColor", new Color(colorValue, 1 - colorValue, 0f));
+                }
+                // Если разность меньше 30 и больше или равна 10, вычисляем промежуточное значение между желтым и красным цветом
+                else if (difference > 20 && difference <= 40)
+                {
+                    colorValue = Mathf.InverseLerp(40, 20, difference);
+                    ballRenderer.material.SetColor("_EmissionColor", new Color(1f, colorValue, 0f));
+                }
+                // Если разность меньше 10 и больше или равна 1, вычисляем промежуточное значение между красным и черным цветом
+                else if (difference > 40 && difference <= 49)
+                {
+                    colorValue = Mathf.InverseLerp(40, 50, difference);
+                    ballRenderer.material.SetColor("_EmissionColor", new Color(1f, 1 - colorValue, colorValue));
+                }
+                // Если разность меньше 1, устанавливаем черный цвет
+                else
+                {
+                    ballRenderer.material.SetColor("_EmissionColor", Color.black);
+                }
             }
-            // Если разность меньше 30 и больше или равна 10, вычисляем промежуточное значение между желтым и красным цветом
-            else if (difference > 20 && difference <= 40)
-            {
-                colorValue = Mathf.InverseLerp(40, 20, difference);
-                ballRenderer.material.SetColor("_EmissionColor", new Color(1f, colorValue, 0f));
-            }
-            // Если разность меньше 10 и больше или равна 1, вычисляем промежуточное значение между красным и черным цветом
-            else if (difference > 40 && difference <= 49)
-            {
-                colorValue = Mathf.InverseLerp(40, 50, difference);
-                ballRenderer.material.SetColor("_EmissionColor", new Color(1f, 1 - colorValue, colorValue));
-            }
-            // Если разность меньше 1, устанавливаем черный цвет
             else
             {
-                ballRenderer.material.SetColor("_EmissionColor", Color.black);
+                inputField.text = "";
+                weight = 0;
+                transforming = false;
             }
         }
        

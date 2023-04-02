@@ -20,7 +20,6 @@ public class VVOD_INFO : MonoBehaviour
     public GameObject canv;
     public SaveDataToJson SaveDataToJson;
     public GameObject mishen;
-    int num;
 
     public void EnterText()
     {
@@ -40,9 +39,10 @@ public class VVOD_INFO : MonoBehaviour
         {
             sex = TMP_Dropdown_sex.options[TMP_Dropdown_sex.value].text;
         }
-        else if (item == 4)
+        if (item == 4)
         {
             check();
+
             canv.SetActive(false);
             mishen.SetActive(true);
         }
@@ -50,12 +50,19 @@ public class VVOD_INFO : MonoBehaviour
         {
             help_texts[item].SetActive(false);
             item += 1;
-            help_texts[item].SetActive(true);
+            if(item < 4)
+            {
+                help_texts[item].SetActive(true);
+            }
         }
+        SaveDataToJson.age = age;
+        SaveDataToJson.Gender = sex;
+        SaveDataToJson.maark = mark;
+        SaveDataToJson.Name = name;
     }
         public void check()
         {
-            if (name == null | mark == 0 | age == 0 | sex == null)
+            if (name == "" | mark == 0 | age == 0 | sex == "")
             {
                 item = 0;
                 EnterText();
@@ -64,8 +71,8 @@ public class VVOD_INFO : MonoBehaviour
             {
                 SaveDataToJson.age = age;
                 SaveDataToJson.Gender = sex;
-                SaveDataToJson.mark = mark;
-                SaveDataToJson.name = name;
+                SaveDataToJson.maark = mark;
+                SaveDataToJson.Name = name;
             }
         }
 }

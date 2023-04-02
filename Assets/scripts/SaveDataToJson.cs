@@ -5,7 +5,7 @@ using UltimateXR.Mechanics.Weapons;
 
 public class SaveDataToJson : MonoBehaviour
 {
-    public int mark;
+    public int maark;
     public string Name;
     public string Gender;
     public int age;
@@ -21,35 +21,35 @@ public class SaveDataToJson : MonoBehaviour
 
 
         // Записываем данные в файл
-        if(sceneIndex == 0)
+        if(sceneIndex == 1)
         {
             string filePath = Application.dataPath + "/1STLVL.json";
             var LVL1DATA = new SaveData
             {
                 age = "Возраст испытуемого: " + age.ToString(),
                 Name = "ФИО испытуемого: " + Name,
-                Mark = "Оценка по математике испытуемого: " + mark.ToString(),
+                Mark = "Оценка по математике испытуемого: " + maark.ToString(),
                 Gender = "Пол испытуемого: " + Gender,
-                baloons = "время за которое были сбиты8 шаров: " + baloons.ToString(),
+                baloons = "время за которое были сбитых шаров: " + baloons.ToString(),
             };
             string jsonData = JsonConvert.SerializeObject(LVL1DATA,  Formatting.Indented);
             File.WriteAllText(filePath, jsonData);
         }
-        else if (sceneIndex == 1)
+        else if (sceneIndex == 2)
         {
             string filePath = Application.dataPath + "/2NdLVL.json";
             var LVL2DATA = new LVL2DATA
             {
-                b1 = "Разницы масс участника под номером 1): " + normals[0],
-                b2 = "Разницы масс участника под номером 2): " + normals[1],
-                b3 = "Разницы масс участника под номером 3): " + normals[2],
-                b4 = "Разницы масс участника под номером 4): " + normals[3],
-                b5 = "Разницы масс участника под номером 5): " + normals[4],
-                b6 = "Разницы масс участника под номером 6): " + normals[5],
-                b7 = "Разницы масс участника под номером 7): " + normals[6],
-                b8 = "Разницы масс участника под номером 8): " + normals[7],
-                b9 = "Разницы масс участника под номером 9): " + normals[8],
-                b10 = "Разницы масс участника под номером 10): " + normals[9],
+                b1 = "Разницы масс участника под номером 1 (справа налево): " + normals[0],
+                b2 = "Разницы масс участника под номером 2 (справа налево): " + normals[1],
+                b3 = "Разницы масс участника под номером 3 (справа налево): " + normals[2],
+                b4 = "Разницы масс участника под номером 4 (справа налево): " + normals[3],
+                b5 = "Разницы масс участника под номером 5 (справа налево): " + normals[4],
+                b6 = "Разницы масс участника под номером 6 (справа налево): " + normals[5],
+                b7 = "Разницы масс участника под номером 7 (справа налево): " + normals[6],
+                b8 = "Разницы масс участника под номером 8 (справа налево): " + normals[7],
+                b9 = "Разницы масс участника под номером 9 (справа налево): " + normals[8],
+                b10 = "Разницы масс участника под номером 10 (справа налево): " + normals[9],
 
                 bFalse1 = "Время сбития шаров из обманки под норером 1: " + crackens[0],
                 bFalse2 = "Время сбития шаров из обманки под норером 2: " + crackens[1],
@@ -63,10 +63,7 @@ public class SaveDataToJson : MonoBehaviour
         }
         
     }
-    private void Start()
-    {
-        SaveToJson();
-    }
+
     private class SaveData
     {
         public string Name { get; set; }

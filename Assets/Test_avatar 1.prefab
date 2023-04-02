@@ -484,7 +484,7 @@ MonoBehaviour:
       _avatar: {fileID: 2590049530829630559}
       _side: 1
       _upperArmLength: 0.3411835
-      _forearmLength: 0.06919147
+      _forearmLength: 0.18147418
       _fingerUniversalLocalAxes:
         _transform: {fileID: 6943417717668068374}
         _localRight: {x: 1, y: 0, z: 0}
@@ -495,20 +495,20 @@ MonoBehaviour:
         _initialLocalRotation: {x: 0.050269395, y: 0.0185998, z: -0.09530335, w: 0.9940042}
         _initialLocalReferenceRotation: {x: 0, y: 0, z: 0, w: 1}
         _initialUniversalLocalReferenceRotation: {x: 0, y: 0, z: 0, w: 1}
-        _initialPosition: {x: 1.8953435, y: 3.846925, z: -0.21977508}
+        _initialPosition: {x: 1.9799675, y: 3.7745714, z: -0.19582945}
         _initialLocalPosition: {x: -0.0000000013411044, y: 0.00038630454, z: -7.4505804e-11}
       _handUniversalLocalAxes:
         _transform: {fileID: 8964486662504952479}
-        _localRight: {x: 0.7436129, y: 0.1080197, z: -0.65982693}
-        _localUp: {x: -0.6637105, y: 0, z: -0.7479896}
-        _localForward: {x: -0.08079763, y: 0.99414897, z: 0.07169382}
-        _universalToActualAxesRotation: {x: 0.64651364, y: -0.21487975, z: -0.2863917, w: 0.67366654}
+        _localRight: {x: 0.7436211, y: 0.1080206, z: -0.6598176}
+        _localUp: {x: -0.6637011, y: 0, z: -0.7479979}
+        _localForward: {x: -0.08079919, y: 0.9941488, z: 0.071693406}
+        _universalToActualAxesRotation: {x: 0.6465153, y: -0.21487525, z: -0.28638798, w: 0.673668}
         _initialRotation: {x: 0.0873034, y: -0.07671851, z: -0.9004812, w: 0.4190778}
         _initialLocalRotation: {x: -0.031544182, y: 0.045498595, z: 0.004464858, w: 0.9984563}
         _initialLocalReferenceRotation: {x: 0, y: 0, z: 0, w: 1}
         _initialUniversalLocalReferenceRotation: {x: 0, y: 0, z: 0, w: 1}
-        _initialPosition: {x: 1.8681102, y: 3.9206815, z: -0.26777518}
-        _initialLocalPosition: {x: 0.00005, y: 0.00084, z: 0.00017}
+        _initialPosition: {x: 1.9527341, y: 3.8483274, z: -0.2438295}
+        _initialLocalPosition: {x: 0.00003, y: 0.00225, z: 0.00008}
       _armUniversalLocalAxes:
         _transform: {fileID: 8846347505803556167}
         _localRight: {x: 0, y: 0.000000059604645, z: -1}
@@ -523,10 +523,10 @@ MonoBehaviour:
         _initialLocalPosition: {x: 0.00028429803, y: 0.0026406702, z: 0.00045254422}
       _forearmUniversalLocalAxes:
         _transform: {fileID: 8578882515386999186}
-        _localRight: {x: 0, y: 0.19802219, z: -0.978466}
+        _localRight: {x: 0, y: 0.035529584, z: -0.9992799}
         _localUp: {x: -1, y: -0, z: -0}
-        _localForward: {x: 0.0582415, y: 0.978466, z: 0.19802219}
-        _universalToActualAxesRotation: {x: 0.4396516, y: -0.45560038, z: -0.54076934, w: 0.5538081}
+        _localForward: {x: 0.013324797, y: 0.9992799, z: 0.035529584}
+        _universalToActualAxesRotation: {x: 0.4893399, y: -0.49273077, z: -0.5071682, w: 0.51043457}
         _initialRotation: {x: 0.059760064, y: -0.12368268, z: -0.9025144, w: 0.40816575}
         _initialLocalRotation: {x: 0.15189463, y: 0.061951715, z: 0.12491172, w: 0.9785127}
         _initialLocalReferenceRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -550,13 +550,13 @@ MonoBehaviour:
         _side: 1
         _finger: 1
         _metacarpalInfo:
-          _length: 0.031135028
+          _length: 0.031135038
           _radius: 0
         _proximalInfo:
-          _length: 0.026434086
+          _length: 0.026434164
           _radius: 0
         _intermediateInfo:
-          _length: 0.019195233
+          _length: 0.019195396
           _radius: 0
         _distalInfo:
           _length: 0
@@ -568,13 +568,13 @@ MonoBehaviour:
         _side: 1
         _finger: 2
         _metacarpalInfo:
-          _length: 0.031135028
+          _length: 0.031135038
           _radius: 0
         _proximalInfo:
-          _length: 0.026434086
+          _length: 0.026434164
           _radius: 0
         _intermediateInfo:
-          _length: 0.11987937
+          _length: 0.1198796
           _radius: 0
         _distalInfo:
           _length: 0
@@ -586,13 +586,13 @@ MonoBehaviour:
         _side: 1
         _finger: 3
         _metacarpalInfo:
-          _length: 0.04890045
+          _length: 0.048900556
           _radius: 0
         _proximalInfo:
-          _length: 0.013292324
+          _length: 0.013292294
           _radius: 0
         _intermediateInfo:
-          _length: 0.11479719
+          _length: 0.11479734
           _radius: 0
         _distalInfo:
           _length: 0
@@ -604,13 +604,13 @@ MonoBehaviour:
         _side: 1
         _finger: 4
         _metacarpalInfo:
-          _length: 0.036370378
+          _length: 0.036370564
           _radius: 0
         _proximalInfo:
-          _length: 0.02605311
+          _length: 0.026052851
           _radius: 0
         _intermediateInfo:
-          _length: 0.028675998
+          _length: 0.028675944
           _radius: 0
         _distalInfo:
           _length: 0
@@ -625,10 +625,10 @@ MonoBehaviour:
           _length: 0.023774814
           _radius: 0
         _proximalInfo:
-          _length: 0.03836921
+          _length: 0.03836919
           _radius: 0
         _intermediateInfo:
-          _length: 0.013183829
+          _length: 0.01318383
           _radius: 0
         _distalInfo:
           _length: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
   _allowHandTracking: 1
   _useArmIK: 1
   _armIKElbowAperture: 0.5
-  _armIKOverExtendMode: 1
+  _armIKOverExtendMode: 3
   _useBodyIK: 1
   _bodyIKSettings:
     _lockBodyPivot: 0
@@ -670,7 +670,7 @@ MonoBehaviour:
     _neckBaseHeight: 1.65
     _neckForwardOffset: -0.06
     _eyesBaseHeight: 1.8
-    _eyesForwardOffset: -0.13
+    _eyesForwardOffset: 0
   _useLegIK: 1
   _listControllerEvents: []
 --- !u!65 &8878498312247414661
@@ -899,15 +899,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6332531002992653792, guid: 2f7a5d0166ab0d041bed38f7cc6affef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6088407
+      value: 0.6934645
       objectReference: {fileID: 0}
     - target: {fileID: 6332531002992653792, guid: 2f7a5d0166ab0d041bed38f7cc6affef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.941447
+      value: 0.8690932
       objectReference: {fileID: 0}
     - target: {fileID: 6332531002992653792, guid: 2f7a5d0166ab0d041bed38f7cc6affef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0038277507
+      value: 0.020117924
       objectReference: {fileID: 0}
     - target: {fileID: 6332531002992653792, guid: 2f7a5d0166ab0d041bed38f7cc6affef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1147,15 +1147,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6888806815857526915, guid: 04c8889d7bf6ac14493c19281266fb66, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00005
+      value: 0.00003
       objectReference: {fileID: 0}
     - target: {fileID: 6888806815857526915, guid: 04c8889d7bf6ac14493c19281266fb66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00084
+      value: 0.00225
       objectReference: {fileID: 0}
     - target: {fileID: 6888806815857526915, guid: 04c8889d7bf6ac14493c19281266fb66, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00017
+      value: 0.00008
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c8889d7bf6ac14493c19281266fb66, type: 3}
