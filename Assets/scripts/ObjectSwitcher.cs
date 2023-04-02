@@ -56,13 +56,6 @@ public class ObjectSwitcher : MonoBehaviour
             imageDisplay.sprite = images[currentImageIndex];
             AudioSource.clip = audios[currentImageIndex];
             AudioSource.Play();
-            if (currentImageIndex == images.Count - 1)
-            {
-                yield return new WaitForSeconds(timeBetweenImages);
-                imageDisplay.enabled = false;
-                panel.SetActive(true);
-                break;
-            }
             if(currentImageIndex == spheretime)
             {
                 bullet1.StartAnim();
@@ -71,6 +64,15 @@ public class ObjectSwitcher : MonoBehaviour
             {
                 bullet2.StartAnim();
             }
+            if (currentImageIndex == images.Count - 1)
+            {
+
+                yield return new WaitForSeconds(timeBetweenImages);
+                imageDisplay.enabled = false;
+                panel.SetActive(true);
+                break;
+            }
+
         }
     }
 }
