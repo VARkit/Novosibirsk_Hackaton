@@ -8,6 +8,8 @@ public class Zapominanie : MonoBehaviour
     public ObjectSwitcher ObjectSwitcher;
     int amount;
     public GameObject[] btns;
+    public SaveDataToJson SaveDataToJson;
+    public int num;
     public void vvod(string type)
     {
         amount += 1;
@@ -18,6 +20,7 @@ public class Zapominanie : MonoBehaviour
         if (amount == ObjectSwitcher.images.Count)
         {
             StartCoroutine(wait());
+            SaveDataToJson.Zapom[num] = FullVvod;
 
         }
     }

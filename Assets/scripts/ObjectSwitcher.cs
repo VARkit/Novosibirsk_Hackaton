@@ -14,8 +14,10 @@ public class ObjectSwitcher : MonoBehaviour
     public GameObject panel;
     private int currentImageIndex = 0; // индекс текущей картинки
     bool OneTime;
-
-
+    public int spheretime;
+    public int spheretime2;
+    public SphereShooter bullet1;
+    public SphereShooter bullet2;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player" && currentImageIndex == 0)
@@ -60,6 +62,14 @@ public class ObjectSwitcher : MonoBehaviour
                 imageDisplay.enabled = false;
                 panel.SetActive(true);
                 break;
+            }
+            if(currentImageIndex == spheretime)
+            {
+                bullet1.StartAnim();
+            }
+            if(currentImageIndex == spheretime2)
+            {
+                bullet2.StartAnim();
             }
         }
     }

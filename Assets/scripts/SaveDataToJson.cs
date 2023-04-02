@@ -12,6 +12,7 @@ public class SaveDataToJson : MonoBehaviour
     public string baloons;
     public string[] normals;
     public string[] crackens;
+    public string[] Zapom;
     public int sceneIndex;
     public void SaveToJson()
     {
@@ -61,6 +62,24 @@ public class SaveDataToJson : MonoBehaviour
             string LVL2 = JsonConvert.SerializeObject(LVL2DATA, Formatting.Indented);
             File.WriteAllText(filePath, LVL2);
         }
+        else if(sceneIndex == 3)
+        {
+            string filePath = Application.dataPath + "/3RDLVL.json";
+            var LVL3DATA = new LVL3DATA
+            {
+                m1 = Zapom[0],
+                m2 = Zapom[1],
+                m3 = Zapom[2],
+                m4 = Zapom[3],
+                m5 = Zapom[4],
+                m6 = Zapom[5],
+                m7 = Zapom[6],
+                m8 = Zapom[7],
+                m9 = Zapom[8],
+            };
+            string LVL3 = JsonConvert.SerializeObject(LVL3DATA, Formatting.Indented);
+            File.WriteAllText(filePath, LVL3);
+        }
         
     }
 
@@ -90,5 +109,20 @@ public class SaveDataToJson : MonoBehaviour
         public string bFalse3 { get; set; }
         public string bFalse4 { get; set; }
         public string bFalse5 { get; set; }
+    }
+
+    private class LVL3DATA
+    {
+        public string m1 { get; set; }
+        public string m2 { get; set; }
+        public string m3 { get; set; }
+        public string m4 { get; set; }
+        public string m5 { get; set; }
+        public string m6 { get; set; } 
+        public string m7 { get; set; }
+        public string m8 { get; set; }
+        public string m9 { get; set; }
+
+
     }
 }
