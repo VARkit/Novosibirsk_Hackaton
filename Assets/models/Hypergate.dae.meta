@@ -3,7 +3,37 @@ guid: a5b346d66d06e07459360471373c2068
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LIGHTKRAFT GRAVITON_
+    second: {fileID: 2100000, guid: e90b59475bb9cde43ace141b90b69a82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #2142150880
+    second: {fileID: 2100000, guid: 806b4c71404b95c4bad386f900f0bacb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ORDNUNGSKRAFT Graviton
+    second: {fileID: 2100000, guid: 32c163712b2ada84399783ae653c9238, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SG-Gold-glow
+    second: {fileID: 2100000, guid: 38a375f060ebd9449b4ff08baa90d9ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SG-LightW
+    second: {fileID: 2100000, guid: 86b5a95ad2b508042930be2eaa9b2100, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SG-Window
+    second: {fileID: 2100000, guid: 801f561b4d9161d4594352bd470002df, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
