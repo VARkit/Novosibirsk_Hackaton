@@ -17,21 +17,32 @@ public class MishenColLVL0 : MonoBehaviour
     public AudioClip AudioClipEnd;
     public AudioClip CommandFire;
     public SaveDataToJson SaveDataToJson;
+    Renderer Renderer;
+    public bool plzdelete;
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "laser")
         {
+        
             counter += 1;
             if(counter == 10)
             {
                 StartCoroutine(firewait());
                 counter = 11;
             }
+            else if (counter <= 10)
+            {
+                Renderer.material.SetColor("_Color", new Color(Renderer.material.color.r, Renderer.material.color.g, Renderer.material.color.b, Renderer.material.color.a - 0.1f));
+            }
         }
+    }
+    private void Start()
+    {
+        Renderer = GetComponent<Renderer>();
     }
     private void Update()
     {
-        if(go_counter)
+        if (go_counter)
         {
             time += Time.deltaTime;
             text.text = "Время: " + Mathf.Round(time).ToString();
@@ -60,5 +71,6 @@ public class MishenColLVL0 : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         AudioSource.clip = AudioClipEnd;
         AudioSource.Play();
+        gameObject.GetComponent<MeshCollider>().enabled = false;
     }
 }

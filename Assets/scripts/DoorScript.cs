@@ -1,30 +1,31 @@
+using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class DoorScript : MonoBehaviour
 {
     public string code = "78114"; // Код замка
     private string inputCode = ""; // Введенный пользователем код
     public GameObject door;
-    AudioSource dver;
+    public AudioSource dver;
     AudioClip TryAgain;
     public bool Start;
     float time;
     bool predupr;
     public SaveDataToJson SaveDataToJson;
+    public TextMeshProUGUI TextMeshProUGUI;
     // Функция проверки кода замка
     private void CheckCode()
     {
         if (inputCode == code)
         {
-            Debug.Log("Код верный, дверь открыта!");
-            // Открыть дверь
+            TextMeshProUGUI.text = "Код верный!";
             gameObject.SetActive(false);
             SaveDataToJson.SaveToJson();
         }
         else
         {
-            Debug.Log("Код неверный, попробуйте еще раз.");
-            inputCode = ""; // Сбросить введенный код
+            StartCoroutine(Wrong());
             SaveDataToJson.SaveToJson();
         }
     }
@@ -40,6 +41,13 @@ public class DoorScript : MonoBehaviour
         {
             CheckCode();
         }
+    }
+
+    IEnumerator Wrong()
+    {
+        TextMeshProUGUI.text = "Неправильно!";
+        yield return new WaitForSeconds(1);
+        inputCode = ""; // Сбросить введенный код
     }
     private void OnCollisionEnter(Collision collision)
     {

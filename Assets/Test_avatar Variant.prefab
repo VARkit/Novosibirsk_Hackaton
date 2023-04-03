@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.395
       objectReference: {fileID: 0}
+    - target: {fileID: 2590049530312658234, guid: fe4b0c5598ea5d841a92eb4d9d7ead6a, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 53
+      objectReference: {fileID: 0}
     - target: {fileID: 2590049530829630529, guid: fe4b0c5598ea5d841a92eb4d9d7ead6a, type: 3}
       propertyPath: m_Name
       value: Test_avatar Variant
@@ -629,9 +633,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe4b0c5598ea5d841a92eb4d9d7ead6a, type: 3}
---- !u!4 &7220414408690785156 stripped
+--- !u!4 &7220414407854430848 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2590049529333206072, guid: fe4b0c5598ea5d841a92eb4d9d7ead6a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2590049530312658236, guid: fe4b0c5598ea5d841a92eb4d9d7ead6a, type: 3}
   m_PrefabInstance: {fileID: 5171721120280385468}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7318411164331216340
@@ -639,11 +643,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7220414408690785156}
+    m_TransformParent: {fileID: 7220414407854430848}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c820ff231264e5b4e817f1ac9a0b4d13, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c820ff231264e5b4e817f1ac9a0b4d13, type: 3}
       propertyPath: m_LocalPosition.x
@@ -651,7 +655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c820ff231264e5b4e817f1ac9a0b4d13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c820ff231264e5b4e817f1ac9a0b4d13, type: 3}
       propertyPath: m_LocalPosition.z
@@ -663,7 +667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c820ff231264e5b4e817f1ac9a0b4d13, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c820ff231264e5b4e817f1ac9a0b4d13, type: 3}
       propertyPath: m_LocalRotation.y
@@ -692,6 +696,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c820ff231264e5b4e817f1ac9a0b4d13, type: 3}
       propertyPath: m_Name
       value: Golova_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c820ff231264e5b4e817f1ac9a0b4d13, type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c820ff231264e5b4e817f1ac9a0b4d13, type: 3}
