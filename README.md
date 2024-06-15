@@ -1,3 +1,3 @@
 ## MindRift
 
-[![Watch the video](https://img.youtube.com/vi/wYHf5TCPzrw/maxresdefault.jpg)](https://youtu.be/wYHf5TCPzrw?si=XoJHjTKDbYXSnuFl)
+[![Watch the video](https://github.com/VARkit/MindRift/blob/Release/maxresdefault%20(1).png?raw=true)](https://youtu.be/wYHf5TCPzrw?si=XoJHjTKDbYXSnuFl)
